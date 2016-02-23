@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<!-- saved from url=(0075)file:///C:/Users/Srikanth/Documents/Repositories/profileManager/index.html? -->
+<html lang="en" ng-app="profileManager" class="ng-scope"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}</style>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Manage your Profile</title>
+    <link rel="stylesheet" type="text/css" href="./Manage your Profile Mobile View_files/normalize.css">
+    <link rel="stylesheet" type="text/css" href="./Manage your Profile Mobile View_files/mainStyles.css">
+    <link href="./Manage your Profile Mobile View_files/css" rel="stylesheet" type="text/css">
+    <link href="./Manage your Profile Mobile View_files/css(1)" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="./Manage your Profile Mobile View_files/html5shiv.min.js"></script>
+    <script type="text/javascript" src="./Manage your Profile Mobile View_files/angular.min.js"></script>
+    <script type="text/javascript" src="./Manage your Profile Mobile View_files/app.js"></script>
+</head>
+
+<body>
+    <header>
+        <h2 class="customHeading-2">
+			My Contacts
+		</h2>
+    </header>
+    <div class="mainContainer ng-scope" ng-controller="MainCtrl as mctrl">
+        <section id="manager">
+            <button id="addPerson" ng-click="mctrl.resetForm()" class=" formOptionButton blue">+New</button>
+            <div style="clear:both"></div>
+            <!-- ngRepeat: p in mctrl.people --><div class="records clearfix ng-scope" ng-repeat="p in mctrl.people">
+                <div class="recordWrapper">
+                    <p class="ng-binding">Srikanth Vishnuvajhala</p>
+                    <div class="recordButtonGroup clearfix">
+                        <span><button id="deletePerson" ng-click="mctrl.deletePerson($index)" class=" recordButton white">Delete</button></span>
+                        <span><button id="editPerson" ng-click="mctrl.editPerson($index)" class=" recordButton white">Edit</button></span>
+                    </div>
+                    <div style="clear:both"></div>
+                </div>
+            </div><!-- end ngRepeat: p in mctrl.people --><div class="records clearfix ng-scope" ng-repeat="p in mctrl.people">
+                <div class="recordWrapper">
+                    <p class="ng-binding">Hohn Simth</p>
+                    <div class="recordButtonGroup clearfix">
+                        <span><button id="deletePerson" ng-click="mctrl.deletePerson($index)" class=" recordButton white">Delete</button></span>
+                        <span><button id="editPerson" ng-click="mctrl.editPerson($index)" class=" recordButton white">Edit</button></span>
+                    </div>
+                    <div style="clear:both"></div>
+                </div>
+            </div><!-- end ngRepeat: p in mctrl.people -->
+        </section>
+        <section id="formInput">
+            <p class="heading">ADD OR EDIT CONTACT (FULL NAME)</p>
+            <form id="profileInput" role="form" class="ng-dirty ng-submitted ng-valid ng-valid-email ng-valid-date">
+                <div class="inputContainer">
+                <div class="inputFields clearfix">
+                	<div class="form-group">
+                        <label for="firstName" class="">First Name</label>
+                        <div class="input">
+                            <input type="text" class="ng-valid ng-dirty ng-touched" id="firstName" placeholder="Enter First Name" ng-model="mctrl.newPerson.firstName">
+                        </div>
+                    </div>
+                    <div class=" form-group ">
+                        <label for="lastName " class=" ">Last Name</label>
+                        <div class="input">
+                            <input type="text " class="ng-valid ng-dirty ng-touched" id="lastName" placeholder="Enter Last Name" ng-model="mctrl.newPerson.lastName">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="dateOfBirth" class="">Birthday</label>
+                        <div class="input">
+                            <input type="date" id="dateOfBirth" placeholder="DD/MM/YYYY" ng-model="mctrl.newPerson.dateOfBirth" class="ng-valid ng-dirty ng-touched ng-valid-date">
+                        </div>
+                    </div>
+                    <div class=" form-group ">
+                        <label for="company " class=" ">Company</label>
+                        <div class="input">
+                            <input type="text " id="company " placeholder="Enter Company " ng-model="mctrl.newPerson.company" class="ng-valid ng-dirty ng-touched">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="">Email</label>
+                        <div class="input">
+                            <input type="email" id="email" placeholder="example@domain.com" ng-model="mctrl.newPerson.email" class="ng-dirty ng-valid ng-valid-email ng-touched">
+                        </div>
+                    </div>
+                    <div class=" form-group ">
+                        <label for="phone " class=" ">Phone</label>
+                        <div class="input">
+                            <input type="tel " id="phone " placeholder="000-000-0000 " ng-model="mctrl.newPerson.phone" class="ng-valid ng-dirty ng-touched">
+                        </div>
+                    </div>
+                </div>
+                    
+                    <div class="personImage clearfix">
+                        <div class="imagePlaceHolder">
+                            <p>No Preview</p>
+                        </div>
+                        <button ng-click=" mctrl.uploadImage()" class="formOptionButton blue">Upload Image</button>
+                    </div>
+                </div>
+                <div style="clear:both"></div>
+                <div class="formOptions clearfix">
+                    <button id="savePerson" ng-click=" mctrl.addPerson() " class="formOptionButton blue" style="
+    display: block;
+    /* text-align: center; */
+    margin: 10px auto;
+">Save</button>
+                    <button id="resetForm" ng-click="mctrl.resetForm() " class="formOptionButton blue" style="
+    margin: 10px auto;
+    display: block;
+">Cancel</button>
+                </div>
+            </form>
+        </section>
+    </div>
+    <div style="clear:both "></div>
+    <footer>
+        <h3 class="customHeading-3 ">
+			Footer
+		</h3>
+    </footer>
+
+
+
+</body></html>

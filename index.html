@@ -3,13 +3,18 @@
 
 <head>
     <meta charset="UTF-8">
+    <!-- To avoid quirks mode -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Maintain consistency across devices and manage zoom in future -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Manage your Profile</title>
+    <!-- Normalizes Default Browser Styles across all browsers -->
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
     <link rel="stylesheet" type="text/css" href="styles/mainStyles.css">
+    <!-- Loading Similar Fonts as Fonts not Specified -->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <!-- To support html5 tags across old browsers -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.7/angular.min.js"></script>
     <script type="text/javascript" src="app.js"></script>
@@ -22,6 +27,7 @@
 		</h2>
     </header>
     <div class="mainContainer" ng-controller="MainCtrl as mctrl">
+    <!-- Start of Person Manager Add, Edit, Delete -->
         <section id="manager">
             <button id="addPerson" ng-click="mctrl.resetForm()" class=" formOptionButton blue">+New</button>
             <div style="clear:both"></div>
@@ -36,6 +42,9 @@
                 </div>
             </div>
         </section>
+        <!-- End of Person Manger Add, Edit, Delete -->
+
+        <!-- Start of Form Inputs and Options -->
         <section id="formInput">
             <p class="heading">ADD OR EDIT CONTACT (FULL NAME)</p>
             <form id="profileInput" role="form">
@@ -78,21 +87,24 @@
                         </div>
                     </div>
                 </div>
-                    
+                    <!-- Placeholder Image is to be replaced by Image Uploaded using Script -->
                     <div class="personImage">
                         <div class="imagePlaceHolder">
                             <p>No Preview</p>
                         </div>
+                        <!-- Can use input type=file for Image upload -->
                         <button ng-click=" mctrl.uploadImage()" class="formOptionButton blue">Upload Image</button>
                     </div>
                 </div>
                 <div style="clear:both"></div>
+                <!-- Save and Cancel-Reset -->
                 <div class="formOptions">
                     <button id="savePerson" ng-click=" mctrl.addPerson() " class="formOptionButton blue">Save</button>
                     <button id="resetForm" ng-click="mctrl.resetForm() " class="formOptionButton blue">Cancel</button>
                 </div>
             </form>
         </section>
+        <!-- End of Form Inputs and Options -->
     </div>
     <div style="clear:both "></div>
     <footer>

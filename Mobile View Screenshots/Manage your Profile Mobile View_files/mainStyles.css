@@ -44,7 +44,6 @@ body {
 
 /* close commented backslash hack */
 
-
 .mainContainer {
     width: 95%;
 }
@@ -61,8 +60,9 @@ header {
     padding: 0;
     font-size: 30px;
     width: 100%;
-    padding-left: 60px;
+    /* padding-left: 60px; */
     font-weight: 100;
+    text-align: center;
 }
 
 .customHeading-3 {
@@ -76,14 +76,13 @@ header {
 
 #manager {
     float: left;
-    width: 32%;
+    width: 100%;
     height: 100%;
     max-height: 40em;
     border-right: 1 px solid grey;
     overflow-y: auto;
 }
 
-/*Styles for Saved Person Entries*/
 .records .recordWrapper {
     border-bottom: 1px solid lightgrey;
     line-height: 18px;
@@ -114,10 +113,10 @@ header {
 
 #formInput {
     float: left;
-    width: 60%;
+    width: 100%;
     height: 100%;
     font-family: 'Oswald', sans-serif;
-    margin-left: 20px;
+    margin-left: 5px;
 }
 
 #formInput>p.heading {
@@ -125,12 +124,13 @@ header {
 }
 
 .inputContainer {
-    height: 500px;
+    height: 620px;
     border-bottom: 1px solid lightgrey;
 }
 
 #profileInput {
-    margin-left: 20px;
+    /* margin-left: 20px; */
+    margin: 0;
 }
 
 #formInput label {
@@ -144,7 +144,7 @@ header {
 }
 
 #formInput .formOptions {
-    float: right;
+    /* float: right; */
 }
 
 #formInput input {
@@ -203,6 +203,7 @@ button {
     padding-right: 12px;
     min-width: 100px;
     font-size: 12px;
+    /* display: block; */
 }
 
 button#addPerson {
@@ -213,23 +214,26 @@ button#addPerson {
 /*Styles for place Holder Image*/
 
 .personImage {
-    margin: 0 auto;
+    /* margin: 0 auto; */
+    margin-top: 50px;
     text-align: center;
     width: auto;
-    /* float: left; */
+    /* float: none; */
     /* top: 0; */
-    position: relative;
-    display: inline-block;
+    /* position: relative; */
+    /* display: inline; */
 }
 
 .personImage .imagePlaceHolder {
+    margin: 0 auto;
     width: 150px;
+    position: relative;
     height: 200px;
     line-height: 200px;
     display: block;
     border: 20px solid rgb(146, 146, 146);
     background: rgb(211, 212, 211);
-    margin: 5px;
+    /* margin: 5px; */
 }
 
 .personImage .imagePlaceHolder p {
@@ -242,8 +246,8 @@ button#addPerson {
 
 .form-group:not(.personImage) {
 	float: left;
-       width: 55%;
-    }
+	width: 100%;
+	}
 
 /*Footer*/
 
@@ -255,24 +259,39 @@ footer {
     text-align: center;
 }
 
-/*Media Queries for Tablet and Mobile View*/
-
-
+/*Media Queries for Tablet and Mov=bile View*/
 
 /*Desktop*/
 @media and (min-width: 906px) {
 
+	.inputFields{
+		float: left;
+        width: 55%;
+	}
+
+	.personImage{
+		float: left;
+	}
+    .form-group:not(.personImage) {
+       width: 55%;
+    }
 }
 
 /*Tablet*/
 @media and (max-width: 905px) {
 
-	
+	.inputFields{
+		width: 70%;
+	}
+    .form-group:not(.personImage) {
+        
+    }
 }
 
 /*Mobile*/
 @media and(max-width: 640px){
-	/*Please check attached browser implementation of my Design for Mobile View*/
+	#manager{
+		width: 100% !important;
+	}
 
 }
-
