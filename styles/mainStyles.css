@@ -1,0 +1,106 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+}
+
+.mainContainer{
+	width: 95%;
+}
+
+#manager,#formInput{
+	padding: 5px;
+}
+
+header {
+    height: 50px;
+    background: rgb(244, 107, 117);
+    line-height: 50px;
+    color: white;
+}
+
+#manager {
+    float: left;
+    width: 23%;
+    height: 100%;
+    border-right: 1 px solid grey;
+}
+
+#formInput {
+    float: left;
+    width: 73%;
+    height: 100%;
+    font-family: 'Oswald', sans-serif;
+}
+
+#formInput label {
+    display: inline-block;
+    width: 20%;
+}
+
+#formInput .input {
+    display: inline;
+}
+
+
+#formInput input{
+width: 50%;
+font-family: 'Open Sans', sans-serif;
+font-size: 12px;
+line-height: 12px;
+padding: 10px;
+border-radius: 5px;
+margin: 2px;
+}
+.records td{
+	width: 40%;
+	overflow: auto;
+}
+
+button {
+    font-size: 15px;
+    background: rgb(41, 125, 255);
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    padding: 10px;
+    border-style: none;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 1px 1px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 1px 1px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 1px 1px rgba(0,0,0,0.75);
+}
+
+button#addPerson, button#editPerson , button#deletePerson{
+	float: right;
+}
+
+.personImage {
+   
+}
+
+.form-group:not(.personImage) {
+    float: left;
+    width: 55%;
+}
+
+img {
+    width: 150px;
+    height: 200px;
+    display: block;
+}
+
+footer {
+    height: 30px;
+    background: rgb(244, 107, 117);
+    line-height: 30px;
+    color: white;
+    text-align: center;
+}
