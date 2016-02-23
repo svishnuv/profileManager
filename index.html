@@ -23,64 +23,74 @@
     </header>
     <div class="mainContainer" ng-controller="MainCtrl as mctrl">
         <section id="manager">
-            <button id="addPerson" ng-click="mctrl.resetForm()">+New</button>
+            <button id="addPerson" ng-click="mctrl.resetForm()" class=" formOptionButton blue">+New</button>
             <div style="clear:both"></div>
-            <div class="records">
-            <div ng-repeat="p in mctrl.people">
-				<p>{{p.firstName + p.lastName}}</p>
-				<span><button id="editPerson"ng-click="mctrl.editPerson($index)" class="">Edit</button></span>
-				<span><button id="deletePerson" ng-click="mctrl.deletePerson($index)" class="">Delete</button></span>
-            </div>
-               
+            <div class="records clearfix" ng-repeat="p in mctrl.people">
+                <div class="recordWrapper">
+                    <p>{{p.firstName}} {{p.lastName}}</p>
+                    <div class="recordButtonGroup clearfix">
+                        <span><button id="deletePerson" ng-click="mctrl.deletePerson($index)" class=" recordButton white">Delete</button></span>
+                        <span><button id="editPerson" ng-click="mctrl.editPerson($index)" class=" recordButton white">Edit</button></span>
+                    </div>
+                    <div style="clear:both"></div>
+                </div>
             </div>
         </section>
         <section id="formInput">
-            <p>ADD OR EDIT CONTACT (FULL NAME)</p>
+            <p class="heading">ADD OR EDIT CONTACT (FULL NAME)</p>
             <form id="profileInput" role="form">
-                <div class="form-group">
-                    <label for="firstName" class="">First Name</label>
-                    <div class="input">
-                        <input type="text" class="" id="firstName" placeholder="Enter First Name" ng-model="mctrl.newPerson.firstName">
+                <div class="inputContainer">
+                <div class="inputFields">
+                	<div class="form-group">
+                        <label for="firstName" class="">First Name</label>
+                        <div class="input">
+                            <input type="text" class="" id="firstName" placeholder="Enter First Name" ng-model="mctrl.newPerson.firstName">
+                        </div>
+                    </div>
+                    <div class=" form-group ">
+                        <label for="lastName " class=" ">Last Name</label>
+                        <div class="input">
+                            <input type="text " class=" " id="lastName" placeholder="Enter Last Name" ng-model="mctrl.newPerson.lastName">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="dateOfBirth" class="">Birthday</label>
+                        <div class="input">
+                            <input type="date" id="dateOfBirth" placeholder="DD/MM/YYYY" ng-model="mctrl.newPerson.dateOfBirth">
+                        </div>
+                    </div>
+                    <div class=" form-group ">
+                        <label for="company " class=" ">Company</label>
+                        <div class="input">
+                            <input type="text " id="company " placeholder="Enter Company " ng-model="mctrl.newPerson.company">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="">Email</label>
+                        <div class="input">
+                            <input type="email" id="email" placeholder="example@domain.com" ng-model="mctrl.newPerson.email">
+                        </div>
+                    </div>
+                    <div class=" form-group ">
+                        <label for="phone " class=" ">Phone</label>
+                        <div class="input">
+                            <input type="tel " id="phone " placeholder="000-000-0000 " ng-model="mctrl.newPerson.phone">
+                        </div>
                     </div>
                 </div>
-                <div class=" form-group ">
-                    <label for="lastName " class=" ">Last Name</label>
-                    <div class="input">
-                        <input type="text " class=" " id="lastName " placeholder="Enter Last Name " ng-model="mctrl.newPerson.lasttName">
+                    
+                    <div class="personImage">
+                        <div class="imagePlaceHolder">
+                            <p>No Preview</p>
+                        </div>
+                        <button ng-click=" mctrl.uploadImage()" class="formOptionButton blue">Upload Image</button>
                     </div>
-                </div>
-                <div class="form-group">
-                    <label for="dateOfBirth" class="">Birthday</label>
-                    <div class="input">
-                        <input type="date" id="dateOfBirth" placeholder="DD/MM/YYYY" ng-model="mctrl.newPerson.dateOfBirth">
-                    </div>
-                </div>
-                <div class=" form-group ">
-                    <label for="company " class=" ">Company</label>
-                    <div class="input">
-                        <input type="text " id="company " placeholder="Enter Company " ng-model="mctrl.newPerson.company">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="email" class="">Email</label>
-                    <div class="input">
-                        <input type="email" id="email" placeholder="example@domain.com" ng-model="mctrl.newPerson.email">
-                    </div>
-                </div>
-                <div class=" form-group ">
-                    <label for="phone " class=" ">Phone</label>
-                    <div class="input">
-                        <input type="tel " id="phone " placeholder="000-000-0000 " ng-model="mctrl.newPerson.phone">
-                    </div>
-                </div>
-               <div class="personImage">
-                	 <img src="#">
-                <button ng-click=" mctrl.uploadImage()" >Upload Image</button>
                 </div>
                 <div style="clear:both"></div>
-               
-                <button ng-click=" mctrl.addPerson() ">Save</button>
-                <button ng-click="mctrl.resetForm() ">Cancel</button>
+                <div class="formOptions">
+                    <button id="savePerson" ng-click=" mctrl.addPerson() " class="formOptionButton blue">Save</button>
+                    <button id="resetForm" ng-click="mctrl.resetForm() " class="formOptionButton blue">Cancel</button>
+                </div>
             </form>
         </section>
     </div>
