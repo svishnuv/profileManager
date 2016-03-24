@@ -1,1 +1,7 @@
-{"name":"Profilemanager","tagline":"","body":"# profileManager\r\n\r\nAs per the given PDF Comp.... HTML 5 and Angular Came to my mind for SCRUD\r\n\r\nDesigned using html5 , css 3 , Angular JS \r\n\r\nFeatures\r\n--------\r\nAdd Person\r\nDelete Person \r\nSave Form\r\n\r\nThings not Implemented due to time Constraint\r\n---------------------------------------------\r\nEdit Person \r\nAngular dirty checking Form Validation\r\nResponsiveness\r\n\r\n\r\nGiven a Chance i can implement these features in the coming interviews\r\n\r\nAttached a Notepad screenshot which showcases my thought process and browser edited mobile view page.\r\n\r\nPlease find them in the folder.","google":"","note":"Don't delete this file! It's used internally to help with page regeneration."}
+{
+  "name": "Profilemanager",
+  "tagline": "",
+  "body": "# profileManager\r\n\r\nAs per the given PDF Comp.... HTML 5 and Angular Came to my mind for SCRUD\r\n\r\nDesigned using html5 , css 3 , Angular JS \r\n\r\nFeatures\r\n--------\r\nAdd Person\r\nDelete Person \r\nSave Form\r\n\r\nThings not Implemented due to time Constraint\r\n---------------------------------------------\r\nEdit Person \r\nAngular dirty checking Form Validation\r\nResponsiveness\r\n\r\n\r\nGiven a Chance i can implement these features in the coming interviews\r\n\r\nAttached a Notepad screenshot which showcases my thought process and browser edited mobile view page.\r\n\r\nPlease find them in the folder.",
+  "google": "",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
